@@ -2,6 +2,7 @@
 # Dans le tableau 1 = blanc 2 = noir
 
 import numpy as np
+from minmax_ia import meilleur_mouvement
 
 def score(tableau):
     return int(np.sum(tableau == 1)), int(np.sum(tableau == 2))
@@ -32,6 +33,8 @@ def mouvements_valides(tableau, joueur):
             if positions_capturees(tableau, i, j, joueur):
                 valides.append((i,j))
     return valides
+
+
 
 value_matrix = [[500, -150, 30, 10, 10, 30, -150, 300],
                 [-150, -250, 0, 0, 0, 0, -250, -150],
@@ -82,8 +85,12 @@ while True:
     print(f"Turn of the: {'Blacks (2)' if joueur == 2 else 'Whites (1)'}")
     print(f"Score : Whites {whi} - Blacks {bla}\n")
     print(f"Possible moves : {mouvements}\n")
-    x = int(input("Enter the x coordinate: "))
-    y = int(input("Enter the y coordinate: "))
+    if joueur == 2:
+        x,y = meilleur_mouvement(othello_base, 2, 3, mouvements_valides, positions_capturees, score)
+        print(f"AI plays at position ({x}, {y})")
+    else:
+        x = int(input("Enter the x coordinate: "))
+        y = int(input("Enter the y coordinate: "))
     catchs = positions_capturees(othello_base, x, y, joueur)
     if catchs:
         othello_base[y][x] = joueur
