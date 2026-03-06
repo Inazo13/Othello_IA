@@ -3,6 +3,7 @@
 
 import numpy as np
 from minmax_ia import MinMaxIA
+from alphabeta_ia import AlphaBetaIA
 
 def score(tableau):
     return int(np.sum(tableau == 1)), int(np.sum(tableau == 2))
@@ -42,24 +43,6 @@ def matrice_base():
     othello_base[4][4] = 1
     return othello_base
 
-value_matrix = [[500, -150, 30, 10, 10, 30, -150, 300],
-                [-150, -250, 0, 0, 0, 0, -250, -150],
-                [30, 0, 1, 2, 2, 1, 0, 30],
-                [10, 0, 2, 16, 16, 2, 0, 10],
-                [10, 0, 2, 16, 16, 2, 0, 10],
-                [30, 0, 1, 2, 2, 1, 0, 30],
-                [-150, -250, 0, 0, 0, 0, -250, -150],
-                [500, -150, 30, 10, 10, 30, -150, 500]]
-
-# value_matrix2 = [[100, -20, 10, 5, 5, 10, -20, 100],
-#                  [-20, -50, -2, -2, -2, -2, -50, -20],
-#                  [10, -2, -1, -1, -1, -1, -2, 10],
-#                  [5, -2, -1, -1, -1, -1, -2, 5],
-#                  [5, -2, -1, -1, -1, -1, -2, 5],
-#                  [10, -2, -1, -1, -1, -1, -2, 10],
-#                  [-20, -50, -2, -2, -2, -2, -50, -20],
-#                  [100, -20, 10, 5, 5, 10, -20, 100]]
-
 def partie():
     print("OTHELLO — Mode Console\n")
     print("1 : Joueur vs Joueur")
@@ -76,8 +59,10 @@ def partie():
         print("Entrer 1, 2, 3 ou 4.")
 
     othello_base = matrice_base()
-    ia_blanc = MinMaxIA() if choix in (2, 4) else None
-    ia_noir = MinMaxIA() if choix in (3, 4) else None
+    # ia_blanc = MinMaxIA() if choix in (2, 4) else None
+    # ia_noir = MinMaxIA() if choix in (3, 4) else None
+    ia_blanc = AlphaBetaIA() if choix in (2, 4) else None
+    ia_noir = AlphaBetaIA() if choix in (3, 4) else None
     joueur = 2
 
     while True:
@@ -107,7 +92,7 @@ def partie():
 
         ia = ia_noir if joueur == 2 else ia_blanc
         if ia:
-            x,y = ia.meilleur_mouvement(othello_base, joueur, 5, mouvements_valides, positions_capturees, score)
+            x,y = ia.meilleur_mouvement(othello_base, joueur, 5, mouvements_valides, positions_capturees, score)            
             print(f"AI plays at position ({x}, {y})")
         else:
             while True: 
