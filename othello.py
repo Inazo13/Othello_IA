@@ -2,11 +2,23 @@
 # Dans le tableau 1 = blanc 2 = noir
 
 import numpy as np
+from datetime import datetime
 from minmax_ia import MinMaxIA
 from alphabeta_ia import AlphaBetaIA
 
 def score(tableau):
     return int(np.sum(tableau == 1)), int(np.sum(tableau == 2))
+
+# Function to write the log of the game in a .txt file
+def ecrire_log(nom_fichier, turn, joueur, x, y, valeur=None):
+    nom_couleur = "Blanc" if joueur == 1 else "Noir"
+    
+    with open(nom_fichier, "a", encoding="utf-8") as f:
+        if valeur is not None:
+            f.write(f"Turn {turn}: IA ({nom_couleur}) joue ({x}, {y}), Valeur: {valeur}\n")
+        else:
+            f.write(f"Turn {turn}: Joueur ({nom_couleur}) joue ({x}, {y})\n")
+
 
 def positions_capturees(tableau, ligne, col, joueur):
     if tableau[col][ligne] != 0:
@@ -65,6 +77,16 @@ def partie():
     ia_noir = AlphaBetaIA() if choix in (3, 4) else None
     joueur = 2
 
+
+    # ---------------------Fichier .txt--------------------
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    nom_fichier_log = f"logs/log_match_{timestamp}.txt"
+    with open(nom_fichier_log, "w", encoding="utf-8") as f:
+        f.write(f"--- NOUVELLE PARTIE D'OTHELLO ({timestamp}) ---\n")
+    # ----------------------------------------------------
+    
+    turn_actuel = 1
+
     while True:
         print(othello_base)
         mouvements = mouvements_valides(othello_base, joueur)
@@ -92,8 +114,14 @@ def partie():
 
         ia = ia_noir if joueur == 2 else ia_blanc
         if ia:
-            x,y = ia.meilleur_mouvement(othello_base, joueur, 5, mouvements_valides, positions_capturees, score)            
+            result_ia = ia.meilleur_mouvement(othello_base, joueur, 5, mouvements_valides, positions_capturees, score)            
+            if len(result_ia) == 3:
+                x, y, valeur_ia = result_ia
+            else:
+                x, y = result_ia
+                valeur_ia = "N/D"
             print(f"AI plays at position ({x}, {y})")
+            ecrire_log(nom_fichier_log, turn_actuel, joueur, x, y, valeur_ia)
         else:
             while True: 
                 try:
@@ -104,12 +132,14 @@ def partie():
                     print("Coup invalide")
                 except ValueError:
                     print("Entrez des coordonées")
+            ecrire_log(nom_fichier_log, turn_actuel, joueur, x, y)
         catchs = positions_capturees(othello_base, x, y, joueur)
         if catchs:
             othello_base[y][x] = joueur
             for rl, rc in catchs:
                 othello_base[rc][rl] = joueur
             joueur = autre_joueur # change le turn
+            turn_actuel += 1
         else: 
             print("bad movement")
 

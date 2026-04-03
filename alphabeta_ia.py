@@ -137,5 +137,6 @@ class AlphaBetaIA:
 
         if meilleur_move is None and mouvements:
             meilleur_move = mouvements[0]
+            meilleur_score = self.evaluation2(tableau, jugadorIA)
 
-        return meilleur_move
+        return meilleur_move[0], meilleur_move[1], meilleur_score
