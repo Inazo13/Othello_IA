@@ -1,0 +1,10 @@
+--- NOUVELLE PARTIE D'OTHELLO (20260406_104558) ---
+Turn 1: IA (Noir) joue (5, 4), Valeur: N/D
+Turn 2: IA (Blanc) joue (5, 5), Valeur: 36
+Turn 3: IA (Noir) joue (5, 6), Valeur: N/D
+Turn 4: IA (Blanc) joue (5, 3), Valeur: 91
+Turn 5: IA (Noir) joue (5, 2), Valeur: N/D
+Turn 6: IA (Blanc) joue (4, 2), Valeur: 94
+Turn 7: IA (Noir) joue (3, 2), Valeur: N/D
+Turn 8: IA (Blanc) joue (2, 2), Valeur: 85
+Turn 9: IA (Noir) joue (1, 1), Valeur: N/D

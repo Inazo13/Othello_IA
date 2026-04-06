@@ -5,6 +5,7 @@ import numpy as np
 from datetime import datetime
 from minmax_ia import MinMaxIA
 from alphabeta_ia import AlphaBetaIA
+from montecarlo_ia import MonteCarloIA
 
 def score(tableau):
     return int(np.sum(tableau == 1)), int(np.sum(tableau == 2))
@@ -72,15 +73,15 @@ def partie():
 
     othello_base = matrice_base()
     # ia_blanc = MinMaxIA() if choix in (2, 4) else None
-    # ia_noir = MinMaxIA() if choix in (3, 4) else None
+    # ia_noir = MinMaxIA() if choix in (3, 4) else None 55-9
     ia_blanc = AlphaBetaIA() if choix in (2, 4) else None
-    ia_noir = AlphaBetaIA() if choix in (3, 4) else None
+    ia_noir = MonteCarloIA() if choix in (3, 4) else None
     joueur = 2
 
 
     # ---------------------Fichier .txt--------------------
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    nom_fichier_log = f"logs/log_match_{timestamp}.txt"
+    nom_fichier_log = f"logsMontecarloVSAlphaBeta/log_match_{timestamp}.txt"
     with open(nom_fichier_log, "w", encoding="utf-8") as f:
         f.write(f"--- NOUVELLE PARTIE D'OTHELLO ({timestamp}) ---\n")
     # ----------------------------------------------------
