@@ -1,0 +1,26 @@
+--- NOUVELLE PARTIE D'OTHELLO (20260406_120723) ---
+Turn 1: IA (Noir) joue (2, 3), Valeur: N/D
+Turn 2: IA (Blanc) joue (2, 2), Valeur: 36
+Turn 3: IA (Noir) joue (2, 1), Valeur: N/D
+Turn 4: IA (Blanc) joue (2, 4), Valeur: 91
+Turn 5: IA (Noir) joue (2, 5), Valeur: N/D
+Turn 6: IA (Blanc) joue (3, 5), Valeur: 94
+Turn 7: IA (Noir) joue (4, 5), Valeur: N/D
+Turn 8: IA (Blanc) joue (1, 5), Valeur: 85
+Turn 9: IA (Noir) joue (0, 5), Valeur: N/D
+Turn 10: IA (Blanc) joue (2, 6), Valeur: 94
+Turn 11: IA (Noir) joue (2, 7), Valeur: N/D
+Turn 12: IA (Blanc) joue (3, 6), Valeur: 107
+Turn 13: IA (Noir) joue (4, 6), Valeur: N/D
+Turn 14: IA (Blanc) joue (1, 4), Valeur: 77
+Turn 15: IA (Noir) joue (0, 4), Valeur: N/D
+Turn 16: IA (Blanc) joue (3, 7), Valeur: 28
+Turn 17: IA (Noir) joue (4, 2), Valeur: N/D
+Turn 18: IA (Blanc) joue (1, 7), Valeur: 164
+Turn 19: IA (Noir) joue (4, 7), Valeur: N/D
+Turn 20: IA (Blanc) joue (1, 6), Valeur: -67
+Turn 21: IA (Noir) joue (0, 7), Valeur: N/D
+Turn 22: IA (Blanc) joue (5, 5), Valeur: -127
+Turn 23: IA (Noir) joue (6, 5), Valeur: N/D
+Turn 24: IA (Blanc) joue (5, 6), Valeur: -127
+Turn 25: IA (Noir) joue (6, 6), Valeur: N/D

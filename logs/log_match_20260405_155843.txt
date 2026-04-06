@@ -1,0 +1,61 @@
+--- NOUVELLE PARTIE D'OTHELLO (20260405_155843) ---
+Turn 1: Joueur (Noir) joue (3, 2)
+Turn 2: IA (Blanc) joue (2, 2), Valeur: 2
+Turn 3: Joueur (Noir) joue (5, 4)
+Turn 4: IA (Blanc) joue (4, 2), Valeur: 30
+Turn 5: Joueur (Noir) joue (4, 1)
+Turn 6: IA (Blanc) joue (6, 5), Valeur: 34
+Turn 7: Joueur (Noir) joue (6, 4)
+Turn 8: IA (Blanc) joue (5, 0), Valeur: 62
+Turn 9: Joueur (Noir) joue (7, 6)
+Turn 10: IA (Blanc) joue (2, 5), Valeur: 222
+Turn 11: Joueur (Noir) joue (4, 0)
+Turn 12: IA (Blanc) joue (3, 0), Valeur: 242
+Turn 13: Joueur (Noir) joue (2, 4)
+Turn 14: IA (Blanc) joue (2, 3), Valeur: 244
+Turn 15: Joueur (Noir) joue (5, 2)
+Turn 16: IA (Blanc) joue (7, 4), Valeur: 251
+Turn 17: Joueur (Noir) joue (6, 3)
+Turn 18: IA (Blanc) joue (7, 2), Valeur: 281
+Turn 19: Joueur (Noir) joue (6, 2)
+Turn 20: IA (Blanc) joue (5, 3), Valeur: 281
+Turn 21: Joueur (Noir) joue (5, 5)
+Turn 22: IA (Blanc) joue (4, 5), Valeur: 320
+Turn 23: Joueur (Noir) joue (7, 3)
+Turn 24: IA (Blanc) joue (7, 5), Valeur: 436
+Turn 25: Joueur (Noir) joue (7, 1)
+Turn 26: IA (Blanc) joue (7, 7), Valeur: 640
+Turn 27: Joueur (Noir) joue (6, 6)
+Turn 28: IA (Blanc) joue (7, 0), Valeur: 920
+Turn 29: Joueur (Noir) joue (5, 6)
+Turn 30: IA (Blanc) joue (3, 1), Valeur: 922
+Turn 31: Joueur (Noir) joue (4, 6)
+Turn 32: IA (Blanc) joue (5, 1), Valeur: 950
+Turn 33: Joueur (Noir) joue (6, 1)
+Turn 34: IA (Blanc) joue (3, 5), Valeur: 1142
+Turn 35: Joueur (Noir) joue (3, 6)
+Turn 36: IA (Blanc) joue (2, 7), Valeur: 1160
+Turn 37: Joueur (Noir) joue (2, 6)
+Turn 38: IA (Blanc) joue (1, 7), Valeur: 1076
+Turn 39: Joueur (Noir) joue (2, 1)
+Turn 40: IA (Blanc) joue (2, 0), Valeur: 1104
+Turn 41: Joueur (Noir) joue (1, 6)
+Turn 42: IA (Blanc) joue (4, 7), Valeur: 1232
+Turn 43: Joueur (Noir) joue (6, 7)
+Turn 44: IA (Blanc) joue (3, 7), Valeur: 1448
+Turn 45: Joueur (Noir) joue (1, 5)
+Turn 46: IA (Blanc) joue (1, 3), Valeur: 1452
+Turn 47: Joueur (Noir) joue (1, 4)
+Turn 48: IA (Blanc) joue (0, 4), Valeur: 1442
+Turn 49: Joueur (Noir) joue (1, 2)
+Turn 50: IA (Blanc) joue (0, 7), Valeur: 1766
+Turn 51: Joueur (Noir) joue (5, 7)
+Turn 52: IA (Blanc) joue (0, 2), Valeur: 1800
+Turn 53: Joueur (Noir) joue (1, 1)
+Turn 54: IA (Blanc) joue (6, 0), Valeur: 2420
+Turn 55: Joueur (Noir) joue (0, 6)
+Turn 56: IA (Blanc) joue (0, 0), Valeur: 1632
+Turn 57: Joueur (Noir) joue (1, 0)
+Turn 58: IA (Blanc) joue (0, 1), Valeur: 1760
+Turn 59: IA (Blanc) joue (0, 3), Valeur: 1770
+Turn 60: IA (Blanc) joue (0, 5), Valeur: 1000
